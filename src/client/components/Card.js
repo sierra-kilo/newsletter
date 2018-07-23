@@ -9,6 +9,13 @@ class Card extends Component {
     this.state = {
       submitted: false
     }
+    this.changeState = this.changeState.bind(this)
+  }
+
+  changeState() {
+    this.setState({
+      submitted: !(this.state.submitted)
+    })
   }
 
   render() {
@@ -16,7 +23,7 @@ class Card extends Component {
       <div>
         <h2>Keepers Newsletter Signup</h2>
         <Info/>
-        <Form/>
+        <Form changeState={this.changeState}/>
       </div>
     );
   }

@@ -6,9 +6,12 @@ const handleSubmit = (e) => {
   alert("you clicked submit")
 }
 
-const Form = ({}) => (
+const Form = (props) => (
   <div>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => {
+          handleSubmit(e)
+          props.changeState()
+        }}>
       <input></input>
       <Button/>
     </form>
