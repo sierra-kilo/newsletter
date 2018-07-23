@@ -11,7 +11,9 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: Sequelize.UUIDV1
     },
     email: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      // added unique attribute
+      unique: true
     }
   })
   return Email;
