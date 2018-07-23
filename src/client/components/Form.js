@@ -26,7 +26,7 @@ export default class EmailForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const email = this.state.email;
+    const email = this.state.email.toLowerCase();
     this.setState(() => ({
       email: ''
     }))
