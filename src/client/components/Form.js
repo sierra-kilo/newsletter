@@ -27,6 +27,9 @@ export default class EmailForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const email = this.state.email;
+    this.setState(() => ({
+      email: ''
+    }))
 
     axios.post("/api/emails/", {
       email
@@ -37,6 +40,8 @@ export default class EmailForm extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+
+
   }
 
   render() {
@@ -63,25 +68,3 @@ export default class EmailForm extends React.Component {
     )
   }
 }
-
-// import React from 'react';
-// import Button from './Button'
-//
-// const handleSubmit = (e) => {
-//   e.preventDefault()
-//   alert("you clicked submit")
-// }
-//
-// const Form = (props) => (
-//   <div>
-//     <form onSubmit={(e) => {
-//           handleSubmit(e)
-//           props.changeState()
-//         }}>
-//       <input></input>
-//       <Button/>
-//     </form>
-//   </div>
-// );
-//
-// export default Form;

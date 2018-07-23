@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Info from './Info'
 import Form from './Form'
 import Button from './Button'
+import ThankYou from './ThankYou'
 
 class Card extends Component {
   constructor(props) {
@@ -14,16 +15,30 @@ class Card extends Component {
 
   changeState() {
     this.setState({
-      submitted: !(this.state.submitted)
+      submitted: true //!(this.state.submitted)
     })
+    setInterval(() => {
+      this.setState({
+        submitted: false
+      })
+    }, 20000)
   }
 
   render() {
     return (
       <div>
         <h2>Keepers Newsletter Signup</h2>
-        <Info/>
-        <Form changeState={this.changeState}/>
+
+        {!(this.state.submitted) ? (
+          <div>
+            <Info/>
+            <Form changeState={this.changeState}/>
+          </div>
+
+        ) : (
+          <ThankYou/>
+        )}
+
       </div>
     );
   }
