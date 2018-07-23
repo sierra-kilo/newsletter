@@ -12,11 +12,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     email: {
       type: Sequelize.STRING
-    },
-    active: {
-      type: Sequelize.BOOLEAN,
-      allowNull: false,
-      defaultValue: true
     }
   })
   return Email;

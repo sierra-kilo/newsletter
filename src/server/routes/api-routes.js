@@ -8,7 +8,7 @@ module.exports = function(app) {
   // GET route for getting all of the emails
   app.get("/api/emails/", function(req, res) {
     db.Email.findAll({
-      attributes: ['id', 'email', 'active']
+      attributes: ['id', 'email']
     })
     .then(function(dbEmail) {
       res.json(dbEmail);
