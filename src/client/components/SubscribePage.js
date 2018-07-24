@@ -7,7 +7,7 @@ import Button from './Button'
 //     Materialize.updateTextFields();
 //   }
 
-export default class EmailForm extends React.Component {
+export default class Subscribe extends React.Component {
   constructor(props) {
     super(props)
 
@@ -26,7 +26,7 @@ export default class EmailForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const email = this.state.email.toLowerCase();
+    const email = this.state.email.toLowerCase()  ;
     this.setState(() => ({
       email: ''
     }))
@@ -53,10 +53,12 @@ export default class EmailForm extends React.Component {
           this.props.changeState()
         }}>
           <input
-            id="email"
+            // id="email"
+            id="subscribe"
             type="email"
             // className="validate"
-            name="email"
+            // name="email"
+            name="subscribe"
             autoFocus
             value={this.state.email}
             onChange={this.onEmailChange}

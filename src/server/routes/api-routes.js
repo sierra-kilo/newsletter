@@ -27,4 +27,17 @@ module.exports = function(app) {
     });
   });
 
+  // DELETE route for deleting posts
+  app.delete("/api/emails/delete/", function(req, res) {
+    db.Email.destroy({
+      where: {
+        email: req.body.email
+      }
+    })
+    .then(function(dbEmail) {
+      console.log(req.params);
+      res.json(dbEmail);
+    });
+  });
+
 };

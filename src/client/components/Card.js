@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Info from './Info'
-import Form from './Form'
+import Subscribe from './SubscribePage'
+import Unsubscribe from './UnsubscribePage'
 import Button from './Button'
 import ThankYou from './ThankYou'
 
@@ -32,12 +33,14 @@ class Card extends Component {
         {!(this.state.submitted) ? (
           <div>
             <Info/>
-            <Form changeState={this.changeState}/>
+            <Subscribe changeState={this.changeState}/>
           </div>
 
         ) : (
           <ThankYou/>
         )}
+
+        <Unsubscribe changeState={this.changeState}/>
 
       </div>
     );
