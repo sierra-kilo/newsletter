@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Info from './Info'
 import Subscribe from './SubscribePage'
-import Unsubscribe from './UnsubscribePage'
+// import Unsubscribe from './UnsubscribePage'
 import Button from './Button'
 import ThankYou from './ThankYou'
+import { Link } from 'react-router-dom'
 
 class Card extends Component {
   constructor(props) {
@@ -34,13 +35,15 @@ class Card extends Component {
           <div>
             <Info/>
             <Subscribe changeState={this.changeState}/>
+            <Link to="/Unsubscribe"><button>Unsubscribe</button></Link>
+
           </div>
 
         ) : (
           <ThankYou/>
         )}
 
-        <Unsubscribe changeState={this.changeState}/>
+        {/* <Unsubscribe changeState={this.changeState}/> */}
 
       </div>
     );

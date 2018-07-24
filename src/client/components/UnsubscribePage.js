@@ -54,7 +54,7 @@ export default class Unsubscribe extends React.Component {
   render() {
     return (
       <div>
-
+        <div>Unsubscribe</div>
         <form onSubmit={(e) => {
           this.handleSubmit(e)
           this.props.changeState()

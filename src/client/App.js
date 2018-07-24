@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+const ReactDOM = require('react-dom')
+import AppRouter from './routers/AppRouter'
 import "./app.css";
-import Card from './components/Card'
+// import Card from './components/Card'
+// import Unsubscribe from './components/UnsubscribePage'
 
 export default class App extends Component {
   // constructor(props) {
@@ -17,7 +20,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Card/>
+        <AppRouter></AppRouter>
       </div>
     );
   }
