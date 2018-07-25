@@ -3,7 +3,7 @@ import React from 'react';
 
 const Button = ({}) => (
   <div>
-    <button>Click Here</button>
+    <button>Add Email</button>
   </div>
 );
 

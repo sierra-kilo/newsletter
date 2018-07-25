@@ -36,6 +36,7 @@ class Card extends Component {
             <Info/>
             <Subscribe changeState={this.changeState}/>
             <Link to="/Unsubscribe"><button>Unsubscribe</button></Link>
+            <Link to="/admin"><button>Admin</button></Link>
 
           </div>
 

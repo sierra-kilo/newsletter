@@ -16,7 +16,7 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new post
-  app.post("/api/emails", function(req, res) {
+  app.post("/api/emails/", function(req, res) {
     db.Email.create({
       email: req.body.email
     },{
