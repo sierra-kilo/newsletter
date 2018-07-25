@@ -1,9 +1,13 @@
+const sslRedirect = require('heroku-ssl-redirect');
 const express = require('express');
 require('dotenv').config()
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
 
 const app = express();
+
+// enable ssl redirect
+app.use(sslRedirect());
 
 app.use(express.static('dist'));
 
